@@ -1,6 +1,6 @@
 {
   "name": "esoftplay-content",
-  "version": "0.0.1-a",
+  "version": "0.0.1-b",
   "description": "content module on esoftplay framework",
   "main": "index.js",
   "scripts": {
