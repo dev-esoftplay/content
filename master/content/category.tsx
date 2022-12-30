@@ -5,8 +5,9 @@ import { LibCurl } from 'esoftplay/cache/lib/curl/import';
 import { LibList } from 'esoftplay/cache/lib/list/import';
 import { LibNavigation } from 'esoftplay/cache/lib/navigation/import';
 import { LibPicture } from 'esoftplay/cache/lib/picture/import';
+import { LibStyle } from 'esoftplay/cache/lib/style/import';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 
@@ -29,6 +30,9 @@ export default function m(props: ContentCategoryProps): any {
   const conf = esp.config()
   url = url || conf.content
   const data = _state.useSelector(s => s)
+
+  const dimension = 3
+  const imgDimension = useMemo(() => (LibStyle.width - ((dimension + 1) * 10)) / dimension, [])
 
   useEffect(() => {
     new LibCurl(url + 'menu', null,
@@ -53,7 +57,7 @@ export default function m(props: ContentCategoryProps): any {
             <Pressable
               key={index}
               onPress={() => { LibNavigation.push('content/list', { url: item.url, title: item.title, id: item.id }) }}
-              style={{ borderRadius: 8, backgroundColor: "#f2f2f2", flex: 0.35, margin: 5, alignItems: 'center' }} >
+              style={{ borderRadius: 8, backgroundColor: "#f2f2f2", width: imgDimension, height: imgDimension, margin: 5, alignItems: 'center' }} >
               <LibPicture source={{ uri: item.image }} style={{ height: 70, width: 70, marginTop: 16, }} />
               <Text style={{ fontSize: 12, fontWeight: "500", lineHeight: 20, color: "#060606", marginBottom: 12, }}>{item?.title}</Text>
             </Pressable>
