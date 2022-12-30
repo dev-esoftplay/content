@@ -1,6 +1,9 @@
 // withHooks
+import { esp } from 'esoftplay';
+import { ContentHeader } from 'esoftplay/cache/content/header/import';
+import { LibInput } from 'esoftplay/cache/lib/input/import';
+import { LibNavigation } from 'esoftplay/cache/lib/navigation/import';
 
-import { ContentHeader, esp, LibInput, LibNavigation } from 'esoftplay';
 import React, { useRef } from 'react';
 import { View } from 'react-native';
 

@@ -1,6 +1,11 @@
 // withHooks
 // noPage
-import { ContentCategoryProperty, esp, LibCurl, LibNavigation, LibPicture } from 'esoftplay';
+import { esp } from 'esoftplay';
+import { ContentCategoryProperty } from 'esoftplay/cache/content/category/import';
+import { LibCurl } from 'esoftplay/cache/lib/curl/import';
+import { LibNavigation } from 'esoftplay/cache/lib/navigation/import';
+import { LibPicture } from 'esoftplay/cache/lib/picture/import';
+
 import React, { useEffect, useRef } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 

@@ -1,6 +1,7 @@
 // noPage
+import { useGlobalReturn, useGlobalState } from 'esoftplay';
+import { LibComponent } from 'esoftplay/cache/lib/component/import';
 
-import { LibComponent, useGlobalReturn, useGlobalState } from 'esoftplay';
 export interface ContentConfigProps {
   navigation: any
 }

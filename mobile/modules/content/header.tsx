@@ -1,7 +1,11 @@
 // withHooks
 // noPage
+import {  } from 'esoftplay';
+import { LibIcon } from 'esoftplay/cache/lib/icon/import';
+import { LibNavigation } from 'esoftplay/cache/lib/navigation/import';
+import { LibStatusbar } from 'esoftplay/cache/lib/statusbar/import';
+import { LibStyle } from 'esoftplay/cache/lib/style/import';
 
-import { LibIcon, LibNavigation, LibStatusbar, LibStyle } from 'esoftplay';
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 

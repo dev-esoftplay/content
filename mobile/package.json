@@ -16,7 +16,7 @@
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
     "@react-navigation/stack": "^6.2.1",
-    "esoftplay": "^0.0.113-a",
+    "esoftplay": "^0.0.123-i",
     "expo": "~45.0.0",
     "expo-av": "~11.2.3",
     "expo-camera": "~12.2.0",
@@ -40,6 +40,7 @@
     "react-native-awesome-gallery": "^0.3.5",
     "react-native-fast-image": "^8.5.11",
     "react-native-gesture-handler": "~2.2.1",
+    "react-native-pan-pinch-view": "^1.0.1",
     "react-native-picker-scrollview": "^1.0.1",
     "react-native-pinch-zoom-view-movable": "^0.2.1",
     "react-native-reanimated": "~2.8.0",
@@ -47,7 +48,8 @@
     "react-native-screens": "~3.11.1",
     "react-native-web": "0.17.7",
     "react-native-webview": "11.18.1",
-    "shorthash": "^0.0.2"
+    "shorthash": "^0.0.2",
+    "usestable": "^0.1.25"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

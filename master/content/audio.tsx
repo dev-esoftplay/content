@@ -1,6 +1,7 @@
 // noPage
+import {  } from 'esoftplay';
+import { LibComponent } from 'esoftplay/cache/lib/component/import';
 
-import { LibComponent } from "esoftplay";
 import { Audio } from "expo-av";
 
 export interface ContentAudioProps {
