@@ -48,13 +48,14 @@ export default function m(props: ContentCategoryProps): any {
         style={{ flex: 1, padding: 5 }}
         data={data?.list?.[0]?.filter?.((row: any) => row.par_id == 0)}
         numColumns={3}
-        renderItem={(item) => {
+        renderItem={(item: any, index: number) => {
           return (
             <Pressable
+              key={index}
               onPress={() => { LibNavigation.push('content/list', { url: item.url, title: item.title, id: item.id }) }}
               style={{ borderRadius: 8, backgroundColor: "#f2f2f2", flex: 0.35, margin: 5, alignItems: 'center' }} >
               <LibPicture source={{ uri: item.image }} style={{ height: 70, width: 70, marginTop: 16, }} />
-              <Text style={{  fontSize: 12, fontWeight: "500", lineHeight: 20, color: "#060606", marginBottom: 12, }}>{item?.title}</Text>
+              <Text style={{ fontSize: 12, fontWeight: "500", lineHeight: 20, color: "#060606", marginBottom: 12, }}>{item?.title}</Text>
             </Pressable>
           )
         }}

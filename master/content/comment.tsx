@@ -126,7 +126,7 @@ export default function m(props: ContentCommentProps): any {
       </View>
     )
   }
-  let x = (item) => <ContentComment_item url={url} url_post={url_post} {...item} />
+  let x = (item: any, i: number) => <ContentComment_item key={i} url={url} url_post={url_post} {...item} />
 
   return (
     <View style={{ flex: 1 }} >

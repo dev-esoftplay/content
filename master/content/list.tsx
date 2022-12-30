@@ -49,7 +49,7 @@ export default function m(props: ContentListProps): any {
               chosenBulletStyle={{ width: 8, height: 4, borderRadius: 2, marginHorizontal: 4 }}
               bulletStyle={{ width: 4, height: 4, borderRadius: 2, marginHorizontal: 4 }}
               style={{ height: 3 / 4 * LibStyle.width }}>
-              {header.map(item => <ContentItem_header {...item} />)}
+              {header.map((item: any, index: number) => <ContentItem_header key={index} {...item} />)}
             </LibCarrousel>
           </>
         }
@@ -64,7 +64,7 @@ export default function m(props: ContentListProps): any {
             setData(data)
           }
         }}
-        renderItem={(item) => <ContentItem {...item} />}
+        renderItem={(item: any, i: number) => <ContentItem key={i} {...item} />}
       />
     </View>
   )
