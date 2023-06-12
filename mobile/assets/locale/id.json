@@ -1,0 +1,34 @@
+{
+  "content/bookmark": {
+    "header_title": "Artikel tersimpan",
+    "empty_title": "Artikel belum ada",
+    "empty_msg": "Kamu dapat menyimpan artikel untuk dibaca nanti dengan cara klik lambang bookmark"
+  },
+  "content/category": {
+    "header_title": "Kategori"
+  },
+  "content/comment": {
+    "failed_comment": "Komentar gagal dikirim",
+    "need_login": "Silahkan login terlebih dahulu",
+    "header": "Login dengan akun",
+    "login_info": "Silakan login dengan salah satu akun sosial media berikut untuk dapat mengirimkan komentar",
+    "cancel": "BATAL",
+    "header_title": "Komentar",
+    "input_comment": "Kirim Komentar"
+  },
+  "content/detail": {
+    "play_audio": "Klik disini untuk memainkan audio",
+    "download": "Klik disini untuk mengunduh",
+    "comment": "KOMENTAR",
+    "related": "Artikel Terkait"
+  },
+  "content/index": {
+    "home": "Beranda",
+    "cat": "Kategori",
+    "bookmark": "Disimpan"
+  },
+  "content/search": {
+    "header": "Cari Artikel",
+    "input_search": "Cari artikel"
+  }
+}

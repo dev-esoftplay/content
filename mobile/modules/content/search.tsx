@@ -25,11 +25,11 @@ export default function m(props: ContentSearchProps): any {
 
   return (
     <View>
-      <ContentHeader title="Cari Artikel" backButton />
+      <ContentHeader title={esp.lang("content/search", "header")} backButton />
       <LibInput base
         ref={searchInput}
         autoFocus
-        placeholder={"Cari artikel"}
+        placeholder={esp.lang("content/search", "input_search")}
         returnKeyType="search"
         onChangeText={(text) => { }}
         onSubmitEditing={() => doSearch()}

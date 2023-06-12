@@ -88,7 +88,7 @@ export default function m(props: ContentCommentProps): any {
             const success = msg.includes('<div class="alert alert-success" role="alert">')
             if (!success) {
               let _msg = (/<\/span>(.*)<\/div>/g).exec(msg)
-              Alert.alert('Komentar gagal dikirim', _msg?.[1])
+              Alert.alert(esp.lang("content/comment", "failed_comment"), _msg?.[1])
             } else {
               refresh()
             }
@@ -100,7 +100,7 @@ export default function m(props: ContentCommentProps): any {
     } else {
       if (comment_login == 1 && !user) {
         setShowLoginForm(true)
-        LibToastProperty.show('Silahkan login terlebih dahulu')
+        LibToastProperty.show(esp.lang("content/comment", "need_login"))
       }
     }
   }
@@ -109,13 +109,13 @@ export default function m(props: ContentCommentProps): any {
   if (showLoginForm) {
     return (
       <View style={{ flex: 1, backgroundColor: "white" }} >
-        <ContentHeader title="Login dengan akun" />
+        <ContentHeader title={esp.lang("content/comment", "header")} />
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", paddingRight: 16 }} >
-          <Text style={{ flex: 1, padding: 10, color: '#606060' }} >{"Silakan login dengan salah satu akun sosial media berikut untuk dapat mengirimkan komentar"}</Text>
+          <Text style={{ flex: 1, padding: 10, color: '#606060' }} >{esp.lang("content/comment", "login_info")}</Text>
           <View style={{ justifyContent: "center" }} >
             <Pressable
               onPress={() => { setShowLoginForm(false) }} >
-              <Text style={{ color: LibStyle.colorPrimary }} >{"BATAL"}</Text>
+              <Text style={{ color: LibStyle.colorPrimary }} >{esp.lang("content/comment", "cancel")}</Text>
             </Pressable>
           </View>
         </View>
@@ -130,7 +130,7 @@ export default function m(props: ContentCommentProps): any {
 
   return (
     <View style={{ flex: 1 }} >
-      <ContentHeader backButton title="Komentar" />
+      <ContentHeader backButton title={esp.lang("content/comment", "header_title")} />
       <LibKeyboard_avoid
         key={refresher + ''}
         style={{ flex: 1, backgroundColor: '#f9f9f9' }} >
@@ -167,7 +167,7 @@ export default function m(props: ContentCommentProps): any {
           }
           <LibInput base
             ref={commentInput}
-            placeholder={"Kirim Komentar"}
+            placeholder={esp.lang("content/comment", "input_comment")}
             onChangeText={(text) => comment = text}
             style={{ flex: 1, minHeight: 40, paddingHorizontal: 8, borderRadius: 8, backgroundColor: '#f9f9f9', marginVertical: 5, marginHorizontal: 16 }}
           />

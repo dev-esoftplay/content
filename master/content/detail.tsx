@@ -12,6 +12,7 @@ import { LibStyle } from 'esoftplay/cache/lib/style/import';
 import { LibUtils } from 'esoftplay/cache/lib/utils/import';
 import { LibVideo } from 'esoftplay/cache/lib/video/import';
 import { LibWebview } from 'esoftplay/cache/lib/webview/import';
+import esp from 'esoftplay/esp';
 
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useEffect, useRef } from 'react';
@@ -96,7 +97,7 @@ export default function m(props: ContentDetailProps): any {
             <ContentAudio code={result.code} onStatusChange={setIsAudioPlaying} ref={audioRef} />
             <Pressable onPress={() => audioRef.current?._onPlayPausePressed()} style={{ backgroundColor: '#f8f8f8', borderWidth: 1, borderColor: LibStyle.colorPrimary, borderRadius: 13, padding: 16, margin: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} >
               <LibIcon.AntDesign name={isAudioPlaying ? 'pause' : 'play'} color={LibStyle.colorPrimary} />
-              <Text style={{  fontSize: 16, marginLeft: 16, fontWeight: "500", letterSpacing: 1.2, color: LibStyle.colorPrimary }} >Klik disini untuk memainkan audio</Text>
+              <Text style={{  fontSize: 16, marginLeft: 16, fontWeight: "500", letterSpacing: 1.2, color: LibStyle.colorPrimary }} >{esp.lang("content/detail", "play_audio")}</Text>
             </Pressable>
           </>
         }
@@ -104,7 +105,7 @@ export default function m(props: ContentDetailProps): any {
           isDownload &&
           <Pressable onPress={() => Linking.openURL(result.link)} style={{ backgroundColor: '#f8f8f8', borderWidth: 1, borderColor: LibStyle.colorPrimary, borderRadius: 13, padding: 16, margin: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} >
             <LibIcon.SimpleLineIcons name='cloud-download' color={LibStyle.colorPrimary} />
-            <Text style={{  fontSize: 16, marginLeft: 16, fontWeight: "500", letterSpacing: 1.2, color: LibStyle.colorPrimary }} >Klik disini untuk mengunduh</Text>
+            <Text style={{  fontSize: 16, marginLeft: 16, fontWeight: "500", letterSpacing: 1.2, color: LibStyle.colorPrimary }} >{esp.lang("content/detail", "download")}</Text>
           </Pressable>
         }
         {
@@ -135,11 +136,11 @@ export default function m(props: ContentDetailProps): any {
           configlist.comment == 1 &&
           <View style={{ alignItems: 'center', borderBottomWidth: 8, borderBottomColor: '#f2f2f2', paddingBottom: 13 }} >
             <Pressable onPress={() => LibNavigation.navigate('content/comment', { id: result.id })} style={{ borderRadius: 8, paddingHorizontal: 24, paddingVertical: 10, backgroundColor: LibStyle.colorPrimary, }} >
-              <Text style={{  fontSize: 14, fontWeight: "500", lineHeight: 18, color: LibStyle.colorAccent }} >KOMENTAR</Text>
+              <Text style={{  fontSize: 14, fontWeight: "500", lineHeight: 18, color: LibStyle.colorAccent }} >{esp.lang("content/detail", "comment")}</Text>
             </Pressable>
           </View>
         }
-        {result?.related?.length > 0 && <Text style={{  fontSize: 20, fontWeight: "500", lineHeight: 26, color: "#060606", marginLeft: 16, marginBottom: 13, marginTop: 20 }} >Artikel Terkait</Text>}
+        {result?.related?.length > 0 && <Text style={{  fontSize: 20, fontWeight: "500", lineHeight: 26, color: "#060606", marginLeft: 16, marginBottom: 13, marginTop: 20 }} >{esp.lang("content/detail", "related")}</Text>}
         {
           result?.related?.map?.((rel: any, i: number) => {
             return (<ContentItem key={rel + i} {...rel} />)

@@ -47,7 +47,7 @@ export default function m(props: ContentCategoryProps): any {
 
   return (
     <View style={{ flex: 1 }} >
-      <ContentHeader title="Kategori" searchButton />
+      <ContentHeader title={esp.lang("content/category", "header_title")} searchButton />
       <LibList
         style={{ flex: 1, padding: 5 }}
         data={data?.list?.[0]?.filter?.((row: any) => row.par_id == 0)}
