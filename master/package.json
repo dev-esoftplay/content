@@ -1,11 +1,11 @@
 {
   "name": "esoftplay-content",
-  "version": "0.0.1-f",
+  "version": "0.0.1-g",
   "description": "content module on esoftplay framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ./mover.js"
+    "postinstall": "node ../esoftplay/bin/mover.js esoftplay-content"
   },
   "keywords": [
     "espftplay-content",
